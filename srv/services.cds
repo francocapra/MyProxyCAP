@@ -1,8 +1,9 @@
-using { PurchaseContracts as PurchaseContract} from './external/PurchaseContracts';
+using { PurchaseContracts as PC } from './external/PurchaseContracts';
 
-
+@requires: 'authenticated-user'
 service Proxy @(path: '/proxy' ) {
     
     //@requires: [ 'authenticated-user', 'Admin']
-    entity A_PurchaseContract as projection on PurchaseContract.A_PurchaseContract;
+    @readonly
+    entity A_PurchaseContract as projection on PC.A_PurchaseContract;
 }

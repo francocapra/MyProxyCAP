@@ -1,0 +1,1 @@
+cds_requires='{"PurchaseContracts":{"impl":"@sap/cds/libx/_runtime/remote/Service.js","external":true,"kind":"odata-v2","model":"srv/external/PurchaseContracts","credentials":{"url":"https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_PURCHASECONTRACT_PROCESS_SRV;v=0002","headers":{"ApiKey":"nnebOiJTymDRivqfD8cfCWKML4L2ZzU4"}}}}'
