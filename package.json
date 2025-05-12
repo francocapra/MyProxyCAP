@@ -10,7 +10,10 @@
     "@sap-cloud-sdk/resilience": "^4.0.2",
     "@sap/cds": "^8",
     "@sap/xssec": "^4",
-    "express": "^4"
+    "express": "^4",
+    "node-cache": "^5.1.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
   },
   "devDependencies": {
     "@cap-js/cds-types": "^0.9.0",
@@ -19,7 +22,10 @@
     "@sap/dev-cap-tools": "^1.31.0"
   },
   "scripts": {
-    "start": "cds-serve"
+    "start": "cds run --with-mocks --in-memory",
+    "watch": "cds watch --with-mocks --in-memory",
+    "dev": "nodemon -w srv -w package.json -e js,cds,json --exec cds run --with-mocks --in-memory",
+    "test": "jest"
   },
   "cds": {
     "requires": {
@@ -34,7 +40,6 @@
       "PurchaseContracts": {
         "kind": "odata-v2",
         "model": "srv/external/PurchaseContracts",
-
         "csrf": true,
         "csrfInBatch": true
       }
